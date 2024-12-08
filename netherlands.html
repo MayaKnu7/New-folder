@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe - Netherlands</title> <!-- Update the title dynamically based on the country -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file for styling -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="ingredients.html">Ingredients</a></li>
+                <li><a href="my-recipes.html">My Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipe">
+            <h1>Recipe: Dutch Stroopwafels</h1> <!-- Recipe name, update dynamically -->
+
+            <h2>Ingredients</h2>
+            <ul>
+                <li>2 cups all-purpose flour</li>
+                <li>1 cup butter</li>
+                <li>1/2 cup brown sugar</li>
+                <li>1/4 cup water</li>
+                <li>1/2 tsp ground cinnamon</li>
+                <li>1 tsp yeast</li>
+                <li>1/2 cup caramel syrup (for filling)</li>
+            </ul>
+
+            <h2>Instructions</h2>
+            <ol>
+                <li>In a bowl, mix the flour, yeast, and cinnamon.</li>
+                <li>In a saucepan, melt the butter, brown sugar, and water together.</li>
+                <li>Combine the wet and dry ingredients and knead the dough until smooth.</li>
+                <li>Roll out the dough and cut into circles. Bake for 10 minutes at 350°F (175°C).</li>
+                <li>While the cookies are warm, cut them in half and fill with caramel syrup.</li>
+                <li>Allow to cool before serving.</li>
+            </ol>
+
+            <h2>Comments</h2>
+            <div id="comments-section">
+                <textarea id="comment-box" placeholder="Leave a comment..."></textarea><br>
+                <button onclick="submitComment()">Submit</button>
+                <div id="comments-list">
+                    <!-- Comments will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NomNom Navigator. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script> <!-- External JavaScript file -->
+</body>
+
+</html>

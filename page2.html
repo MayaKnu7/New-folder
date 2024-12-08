@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>NomNom Navigator</title>
+    <link rel="stylesheet" href="styleGlobe.css" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet" />
+    
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="photos/food.png" class="menu-icon" onclick="openmenu()" />
+      <div class="menu-box" id="menuGlobe">
+        <div class="right-links-close">
+          <img src="photos/close2.png" onclick="closemenu()" />
+        </div>
+        <div class="menu-links">
+          <a href="index.html" id="home-link">Home</a>
+          <a href="#">Calendar</a>
+          <a href="#">Add Your Recipe</a>
+        </div>
+      </div>
+    </div>
+    
+    <img id="plate" src="photos/plate.png" alt="Plate" />
+    <div id="map"></div>
+    <button id="btn-spin">Pause Rotation</button>
+    <button id="recenter-btn">Recenter Globe</button>
+    <button id="random-country-btn">Choose Random Country</button>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      // var menu = document.getElementById("menuGlobe");
+
+      // function closemenu() {
+      //   menu.style.top = "-100vh";
+      // }
+
+      // function openmenu() {
+      //   menu.style.top = "17%";
+      // }
+      var menu = document.getElementById("menuGlobe");
+
+function closemenu() {
+  menu.style.left = "-300px"; // Move the menu off-screen to the left
+}
+
+function openmenu() {
+  menu.style.left = "0"; // Slide the menu into view
+}
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>NomNom Navigator</title>
+        <link rel ="stylesheet"href="style.css">
+    
+    </head>
+    <body>
+       <div class="container">
+            <img src="photos\food.png" class="menu-icon" onclick="openmenu()">
+            <div class="menu-box" id="menu">
+                <div class="right-links">
+                    <span>
+                    <a href="page2.html">Get Cookin'</a>
+                    <img src="photos\close2.png" onclick="closemenu()">
+                </div>
+                <div class="menu-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Add Your Recipe</a> 
+                </span>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var menu = document.getElementById("menu");
+            var  hoverImage = document.getElementId("hover-image");
+            function closemenu(){
+                menu.style.top = "-100vh";
+            }
+            function openmenu(){
+                menu.style.top = "17%";
+            }
+        </script>
+    </body>
+</html>

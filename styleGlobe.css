@@ -1,0 +1,154 @@
+/* Reset and General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=DynaPuff&family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'DynaPuff', cursive;
+  box-sizing: border-box;
+}
+
+/* Container and Background */
+.container {
+  width: 100%; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: #f1915d;
+  background-size: 50%; /* Scale down the image to 50% of the container */
+  background-position: center; /* Keep the image centered */
+  background-repeat: no-repeat; /* Prevent repetition */
+  position: relative;
+  overflow: hidden; /* Ensures content stays within container */
+}
+
+/* Map and Plate */
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2; /* Ensure the globe is above the plate */
+}
+
+#plate {
+  position: absolute;
+  bottom: 100px;
+  left: 51.5%;
+  transform: translateX(-50%);
+  z-index: 1; /* Plate appears underneath the globe */
+  width: 600px; /* Adjust the size of the plate */
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
+
+/* Buttons */
+#btn-spin,
+#recenter-btn,
+#random-country-btn {
+  font: bold 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background-color: #3386c0;
+  color: white;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 3; /* Buttons above the globe */
+}
+
+#btn-spin {
+  top: 200px;
+  right: 50px;
+}
+
+#btn-spin:hover,
+#recenter-btn:hover,
+#random-country-btn:hover {
+  background-color: #4ea0da;
+}
+
+#recenter-btn {
+  top: 250px;
+  right: 50px;
+}
+
+#random-country-btn {
+  top: 300px;
+  right: 50px;
+}
+
+/* Sideways Menu */
+.menu-icon {
+  position: absolute;
+  top: 2px;
+  width: 150px;
+  right: 40px;
+  cursor: pointer;
+  z-index: 4;
+}
+.right-links-close img{
+    width: 70px;
+    margin-left: 190px;
+    cursor: pointer;
+   }
+.menu-box {
+  position: fixed; /* Fixed for slide-in effect */
+  top: 0;
+  left: -300px; /* Hidden off-screen initially */
+  height: 100%; /* Full height */
+  width: 300px; /* Sidebar width */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  transition: left 0.3s ease; /* Smooth slide-in animation */
+}
+
+/* Open State */
+.menu-box.open {
+  left: 0; /* Bring the menu into view */
+}
+
+/* Menu Links */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-links a:hover {
+    font-weight: 800;
+}
+
+/* Home Link Icon */
+.menu-links #home-link {
+  position: relative;
+}
+
+.menu-links #home-link::after {
+  content: ''; /* Empty content */
+  background-image: url('photos/home.png'); /* Ensure the path is correct */
+  background-size: contain; /* Scale the image to fit the area */
+  background-repeat: no-repeat; /* Prevent repetition of the image */
+  width: 40px; /* Adjust width of the icon */
+  height: 40px; /* Adjust height of the icon */
+  position: absolute;
+  left: 60%; /* Add 'px' to specify units */
+  top: 47%;
+  transform: translateY(-50%); /* Vertically center the icon */
+  display: none; /* Initially hidden */
+}
+
+.menu-links #home-link:hover::after {
+  display: block; /* Show the icon on hover */
+}

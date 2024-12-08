@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=DynaPuff&family=Montserrat:wght@500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DynaPuff', cursive;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('photos/2.png'); /* Image path */
+    background-color: #f1915d;
+    background-size: 50%; /* Set fixed image size to 50% of container */
+    background-position: center; /* Keep the image centered */
+    background-repeat: no-repeat; /* Prevent repetition */
+    position: relative;
+    overflow: hidden; /* Ensures content stays within container */
+}
+
+.menu-icon {
+    width: 150px;
+    position: absolute;
+    top: 2px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.menu-box {
+    width: 80%;
+    background: #ffa56500;
+    position: absolute;
+    top: 17%;
+    left: 10%;
+    padding: 50px 100px;
+    transition: top 1s;
+}
+
+.right-links {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.right-links img {
+    width: 70px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.right-links a {
+    text-decoration: none;
+    color: #fff;
+    background: #a31621;
+    padding: 15px 40px;
+    border-radius: 60px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: fit-content;
+    margin: 30px 0;
+    font-size: 36px;
+}
+
+.menu-links a:hover {
+    font-weight: 700;
+}
+
+.menu-links a:hover::after {
+    display: inline-block;
+}
+
+/* New styles for responsive behavior */
+@media (max-width: 768px) {
+    .container {
+        background-size: 50%; /* Keep the background image fixed at 50% */
+        background-position: center; /* Ensure the background stays centered */
+    }
+
+    .menu-box {
+        width: 90%; /* Make menu box take up more space */
+        padding: 30px 60px; /* Adjust padding for smaller screens */
+        top: 10%; /* Position higher for better visibility */
+    }
+
+    .right-links {
+        top: 15px; /* Adjust top spacing */
+        right: 20px; /* Adjust right spacing */
+    }
+
+    .right-links a {
+        padding: 12px 25px; /* Smaller padding for buttons */
+    }
+
+    .menu-links a {
+        font-size: 28px; /* Smaller font size for menu items */
+        margin: 20px 0; /* Adjust spacing */
+    }
+
+    .menu-icon {
+        width: 120px; /* Smaller menu icon on smaller screens */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .menu-box {
+        width: 100%; /* Make the menu box full width */
+        padding: 20px 40px; /* Adjust padding for mobile screens */
+        top: 5%; /* Position near the top */
+    }
+
+    .right-links {
+        top: 10px; /* Adjust top spacing */
+        right: 10px; /* Adjust right spacing */
+    }
+
+    .right-links img {
+        width: 50px; /* Smaller icon on mobile */
+    }
+
+    .right-links a {
+        padding: 10px 20px; /* Smaller padding for mobile */
+    }
+
+    .menu-links a {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    .menu-icon {
+        width: 100px; /* Adjust menu icon size */
+    }
+}
